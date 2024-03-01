@@ -1,0 +1,33 @@
+Laptop:
+
+
+MagasinCentral :
+
+	envoyer(Laptop l, PointDeVente, Profil)	
+
+	etatDeStock(Profil): EtatLaptop []
+
+	statistiquesDeVente(Profil): StatistiquesDeVente[]
+
+
+
+PointDeVente:
+
+	receptionner(Laptop l, Profil)
+
+	vendre(Laptop l , Profil)
+
+	renvoyerAuMagasinCentral(Laptop , Profil)
+
+EtatLaptop :
+
+	Laptop
+
+	Nombre
+	
+	PointDeVente
+
+
+Profil :
+	
+	

@@ -1,0 +1,55 @@
+PROFIL MAGASIN
+
+    Module de gestion de laptop (CRUD) : 
+        laptopid AUTO
+        marque LISTE
+        reference 
+        processeur LISTE
+        ram LISTE
+        ecran LISTE
+        disquedur LISTE
+
+        ISAKY NY LISTE DIA TOKONY MISY CRUD
+
+    Gestion d’utilisateurs : affectation d’un utilisateur à un point de vente.
+
+        TABLE : affectationutilisateur
+        CRUD AN'IO TABLE ANAKIRAY IO
+
+    achat laptop:
+        mouvementlaptop: 
+            alaina alony ny magasin central
+            (raha mahazo magasin central mihoatra ny roa dia EXCEPTION)
+            avy eo manao insertion amin'ilay mouvementlaptop par rapport amin'ilay magasin central
+
+    transfert des laptops :
+        table : TRANSFERT             
+
+            alaina alony hoe aiza no misy anle laptop (donc idmouvementlaptop)
+            avy eo insertion anatinle transfert
+
+PROFIL DE POINT DE VENTE 
+
+    RECEPTION par point de vente:
+
+        alaina ao anatinle table transfert hoe misy azo receptionner-na ve 
+
+        rehefa manao receptionner dia :
+            mi-end an'ilay transfert : mis a jour anle 'datefindetransfert'
+            mis a jour anle mouvementlaptop.datefin where idmouvementlaptop = ilay ao amle transfert 
+            insertion dans mouvementlaptop
+
+    RENVOI :
+       mi-end an'ilay transfert : mis a jour anle 'datefindetransfert'
+
+
+    VENTE:
+        alaina anatinle mouvementlaptop alony ny stock actuel par point de vente
+
+        processus vente:
+            insertion dans ventelaptop
+            mis a jour anle mouvementlaptop.datefin where idmouvementlaptop = ?
+
+
+
+
