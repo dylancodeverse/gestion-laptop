@@ -1,8 +1,10 @@
 package demo.models.references;
 
 import orm.DynamicORM;
+import orm.annotations.Id;
 
 public class Processeur extends DynamicORM<Processeur> {
+    @Id
     Integer idprocesseurtype;
     String processeur;
 

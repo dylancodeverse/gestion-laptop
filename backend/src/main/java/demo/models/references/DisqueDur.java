@@ -1,8 +1,10 @@
 package demo.models.references;
 
 import orm.DynamicORM;
+import orm.annotations.Id;
 
 public class DisqueDur extends DynamicORM<DisqueDur> {
+    @Id
     Integer iddisquedur;
     String disquedur;
 

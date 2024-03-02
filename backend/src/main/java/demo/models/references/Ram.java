@@ -1,8 +1,10 @@
 package demo.models.references;
 
 import orm.DynamicORM;
+import orm.annotations.Id;
 
 public class Ram extends DynamicORM<Ram> {
+    @Id
     Integer idramtype;
     String ram;
 
