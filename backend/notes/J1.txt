@@ -11,7 +11,7 @@ PROFIL MAGASIN
 
         ISAKY NY LISTE DIA TOKONY MISY CRUD
 
-    Gestion d’utilisateurs : affectation d’un utilisateur à un point de vente.
+    Gestion d'utilisateurs : affectation d'un utilisateur à un point de vente.
 
         TABLE : affectationutilisateur
         CRUD AN'IO TABLE ANAKIRAY IO
