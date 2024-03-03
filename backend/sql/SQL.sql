@@ -39,6 +39,14 @@ create table laptop (
     foreign key(disquedur) references disquedur(iddisquedur)
 );
 
+-- modele de laptop
+
+create table modellaptop(
+    idmodellaptop serial primary key, -- ity izany no numero de serie
+    laptopid integer ,
+    foreign key (laptopid) references laptop(laptopid)
+);    
+
 -- NOTION DE POINT DE VENTE
 
 create table emplacement(
@@ -53,13 +61,17 @@ create table emplacement(
 create table mouvementlaptop(
     idmouvementlaptop serial primary key,
     idemplacement integer,
-    laptopid integer,
+    idmodellaptop integer,
     datedebut timestamp default(now()),
     datefin timestamp,
     foreign key (idemplacement) references emplacement(idemplacement),
-    foreign key (laptopid) references laptop(laptopid)
+    foreign key (idmodellaptop) references modellaptop(idmodellaptop)
 
 );
+
+-- VIEW POUR SAVOIR L'EMPLACEMENT ACTUEL DE CHAQUE PC
+
+    create view dernieremplacement as select * from mouvementlaptop where datefin is null;
 
 -- GESTION D'UTILISATEUR
 

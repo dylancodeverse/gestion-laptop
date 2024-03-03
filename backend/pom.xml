@@ -39,7 +39,7 @@
 		<dependency>
 			<groupId>OORM</groupId>
 			<artifactId>OORM</artifactId>
-			<version>4</version>
+			<version>7</version>
 		</dependency>
 	</dependencies>
 
